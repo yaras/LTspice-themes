@@ -39,7 +39,7 @@ Relatively easy way to switch themes on LTspiceXVII with PowerShell once you're 
 ```powershell
 ### LTspice-themes ###
 function LTspice-themes ([string]$theme) {
-  $file1 = "$HOME\appdata\roaming\LTspiceXVII.ini"
+  $file1 =  Join-Path $env:APPDATA "LTspice.ini"
   $file2 = "D:\Tiedostot\Gits\LTspice-themes\LTspice-themes.txt"
   $content1 = Get-Content -Path $file1
   $content2 = Get-Content -Path $file2
